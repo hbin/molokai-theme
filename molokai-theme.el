@@ -74,7 +74,7 @@
    ;; base
    `(default ((t (:background ,molokai-bg :foreground ,molokai-fg))))
    `(cursor ((t (:background ,molokai-fg :foreground ,molokai-bg))))
-   `(fringe ((t (:foreground ,molokai-base02 :background ,molokai-grey+5))))
+   `(fringe ((t (:foreground ,molokai-base02 :background ,molokai-bg))))
    `(highlight ((t (:background ,molokai-grey))))
    `(region ((t (:background  ,molokai-grey+2))
              (t :inverse-video t)))
@@ -124,6 +124,23 @@
    ;; rainbow-delimiters
    ;; highlight-symbols
    ))
+
+(defcustom molokai-theme-kit nil
+  "Non-nil means load molokai-theme-kit UI component"
+  :type 'boolean
+  :group 'molokai-theme)
+
+(defcustom molokai-theme-kit-file
+  (concat (file-name-directory
+           (or (buffer-file-name) load-file-name))
+          "molokai-theme-kit.el")
+  "molokai-theme-kit-file"
+  :type 'string
+  :group 'molokai-theme)
+
+(if (and molokai-theme-kit
+         (file-exists-p molokai-theme-kit-file))
+    (load-file molokai-theme-kit-file))
 
 ;;;###autoload
 (and load-file-name

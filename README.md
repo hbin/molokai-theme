@@ -20,6 +20,15 @@ Load the theme with the interactive function `load-theme`:
 M-x load-theme RET molokai
 ```
 
+## Do you like the mode line and the linum style in the preview picture?
+I borrow the mode line style from the
+`http://emacs-fu.blogspot.com`. It seems that they were born of a
+couple. If you like it, add the follow line before you load the
+`molokai-theme`:
+```lisp
+(setq molokai-theme-kit t)
+```
+
 # Improvements
 Advises and pull request are welcome.
 
