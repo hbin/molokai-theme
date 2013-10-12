@@ -45,8 +45,9 @@
 ;; http://emacs-fu.blogspot.com/2011/08/customizing-mode-line.html
 (setq-default mode-line-format
               (list
+
                ;; the buffer name; the file name as a tool tip
-               '(:eval (propertize "%b " 'face 'font-lock-keyword-face 'help-echo (buffer-file-name)))
+               " " '(:eval (propertize "%b " 'face 'font-lock-keyword-face 'help-echo (buffer-file-name)))
 
                ;; line and column
                "(" (propertize "%l" 'face 'font-lock-type-face) "," (propertize "%c" 'face 'font-lock-type-face) ") "
