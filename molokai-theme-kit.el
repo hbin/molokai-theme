@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2013 Huang Bin
 
-;; Author: Huang Bin <embrace.hbin@gmail.com>
+;; Author: Huang Bin <huangbin88@foxmail.com>
 ;; URL: https://github.com/hbin/molokai-theme
 ;; Version: 0.8
 
